@@ -1,0 +1,13 @@
+var MongoClient = require ('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
+
+MongoClient.connect(url, {useUnifiedTopology: true}, function ( err, db){
+if (err) throw err;
+var mydbs = db.db("HastePickupService");
+
+mydbs.createCollection("customer", function(err,response){
+if (err) throw err;
+console.log("customer Collection is Created!");
+db.close();
+});
+});

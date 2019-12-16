@@ -1,0 +1,106 @@
+<html>
+<head>
+        <title>HASTE PICKUP SERVICES</title>
+       
+<style>
+
+body{
+background-color:#000000;}
+.d1{
+font-style:initial;
+font-family:sans-serif;
+color:white;
+text-align:center;
+}
+form{
+font-size:15pt;
+background-color:grey;
+color:white;
+
+border-collapse:collapse;
+border-radius:2px;
+}
+.btn{
+border-radius:10px;
+background-color:grey;
+height:39px;
+}
+</style>    
+</head>
+
+<h1>SERVICES </h1>
+<body>
+
+  <fieldset>
+    <div class="d1">
+	<center>
+<h3>HASTE PICKUP SERVICE</h3>
+                 <form  action="/customer" method="POST">
+                    <table  cellpadding = "10" >
+                                             
+                        <tr>
+                            <td><label>USERNAME</label></td> <td><input type="text" name="cname" /></td>
+                        </tr>                      
+                        <tr>
+                            <td><label>FIRST NAME</label></td> <td><input type="text" name="fname" /></td>
+                        </tr>                        
+                        <tr>
+                            <td><label>LAST NAME</label></td> <td><input type="text" name="lname"/></td>
+                        </tr>
+<tr>
+                            <td><label>REGISTER DATA</label></td> <td><input type="text" name="rid"/></td>
+                        </tr>
+<tr>
+                            <td><label>ADDRESS</label></td> <td><input type="text" name="addr"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">  <button type="submit" class="btn">ADD CUSTOMER</button>
+                            </td>
+                        </tr>
+                    </table>
+					</center>
+            </form>  
+			
+			<center>
+            <form  action="/customerdata" method="GET">
+               <button type="submit" class="btn"> TAKE DATA </button>
+            </form>
+</center>
+<center>
+<form  action="/updatecustomer" method="POST">
+<input type="hidden" name="_method" value="PUT">
+<table  cellpadding = "10" >
+                     
+                                               
+                        <tr>
+                            <td><label>USERNAME</label></td> <td><input type="text" name="cname" /></td>
+                        </tr>                      
+                        <tr>
+                            <td><label>FIRST NAME</label></td> <td><input type="text" name="fname" /></td>
+                        </tr>                        
+                        <tr>
+                            <td><label>LAST NAME</label></td> <td><input type="text" name="lname"/></td>
+                        </tr>
+                        <tr>
+                            <td><label>REGISTER DATA</label></td> <td><input type="text" name="rid"/></td>
+                        </tr>
+                         <tr>
+                            <td><label>ADDRESS</label></td> <td><input type="text" name="addr"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><button type="submit" class="btn"> UPDATE </button></td>
+                        </tr>
+                 </table>
+				 </center>
+            </form>  
+<center>
+            <form  action="/delete_data" method="POST">
+<input type="hidden" name="_method" value="DELETE">
+<div>
+                <input type="text"  placeholder="enter id" name="rid" />
+<button type="submit" style="margin-top:25px"; class="btn"> DELETE </button>
+</div>
+</center>
+            </form>    
+</body>
+</html>
